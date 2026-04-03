@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIVACY PROTOCOL // PURPLE HULL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-deep: #0b0b0d;
+  --bg-card: #14141a;
+  --text-bone: #e8e1d6;
+  --text-dim: #a09889;
+  --text-faint: #6b6359;
+  --accent-purple: #6e4a8a;
+  --accent-purple-dim: #503568;
+  --divider: rgba(232, 225, 214, 0.08);
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-bone);
+  font-family: var(--font-heading);
+  font-weight: 300;
+}
+
+::selection {
+  background: var(--accent-purple);
+  color: var(--text-bone);
+}
+
+a { color: var(--accent-purple); text-decoration: none; transition: color 0.3s; }
+a:hover { color: var(--text-bone); }
+
+.page-header {
+  padding: 48px;
+  border-bottom: 1px solid var(--divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header a {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--text-bone);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-header .brand-mark {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--accent-purple);
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+.page-header .back-link {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--text-faint);
+}
+
+.page-header .back-link:hover { color: var(--accent-purple); }
+
+.doc-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 80px 48px 120px;
+}
+
+.doc-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doc-label::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--accent-purple-dim);
+}
+
+.doc-meta {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--text-faint);
+  margin-bottom: 48px;
+}
+
+.doc-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--text-bone);
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+
+.doc-section {
+  margin-bottom: 48px;
+}
+
+.doc-section h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--text-bone);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--divider);
+}
+
+.doc-section p {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+
+.doc-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.doc-section ul li {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-dim);
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.doc-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 1px;
+  background: var(--accent-purple-dim);
+}
+
+.doc-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--divider);
+  margin: 48px 0;
+}
+
+.doc-footer {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid var(--divider);
+}
+
+@media (max-width: 600px) {
+  .page-header { padding: 24px; }
+  .doc-container { padding: 48px 24px 80px; }
+  .doc-title { font-size: 24px; letter-spacing: 4px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <a href="index.html"><span class="brand-mark"></span> PURPLE HULL</a>
+  <a href="index.html" class="back-link">RETURN TO NODE</a>
+</div>
+
+<div class="doc-container">
+  <div class="doc-label">Security Protocol // Privacy</div>
+  <div class="doc-meta">DOCUMENT PH-PRIV-001 // LAST REVISED: MMXXIV</div>
+
+  <h1 class="doc-title">PRIVACY PROTOCOL</h1>
+
+  <div class="doc-section">
+    <h2>I. SCOPE</h2>
+    <p>
+      This protocol governs how Purple Hull R/D Entity ("the Organization") collects,
+      processes, and safeguards information from individuals who access this node.
+      The Organization maintains strict data handling procedures consistent with its
+      operational security standards.
+    </p>
+  </div>
+
+  <div class="doc-section">
+    <h2>II. INFORMATION COLLECTED</h2>
+    <p>
+      The Organization may collect the following categories of information:
+    </p>
+    <ul>
+      <li>Transmission data: designation, contact channel, and message content submitted through the secure form</li>
+      <li>Access logs: timestamps, IP addresses, browser identifiers, and navigation patterns</li>
+      <li>Device signatures: operating system, screen resolution, and connection type</li>
+    </ul>
+    <p>
+      No information is collected beyond what is necessary for operational and
+      security purposes.
+    </p>
+  </div>
+
+  <div class="doc-section">
+    <h2>III. USE OF INFORMATION</h2>
+    <p>
+      Collected information is used exclusively for:
+    </p>
+    <ul>
+      <li>Responding to transmissions and access requests</li>
+      <li>Maintaining site security and integrity</li>
+      <li>Monitoring for unauthorized access attempts</li>
+      <li>Internal operational analytics</li>
+    </ul>
+    <p>
+      The Organization does not sell, lease, or distribute personal information to
+      third parties. Information may be disclosed only when required by applicable law.
+    </p>
+  </div>
+
+  <div class="doc-section">
+    <h2>IV. DATA RETENTION</h2>
+    <p>
+      Transmission data is retained for the duration necessary to fulfill the stated
+      purpose. Access logs are retained for a period not exceeding twelve months.
+      Upon expiration, data is securely purged in accordance with the Organization's
+      information destruction protocols.
+    </p>
+  </div>
+
+  <div class="doc-section">
+    <h2>V. COOKIES & TRACKING</h2>
+    <p>
+      This site uses minimal, essential cookies required for basic functionality.
+      No third-party advertising or behavioral tracking technologies are employed.
+      The Organization does not participate in cross-site tracking networks.
+    </p>
+  </div>
+
+  <div class="doc-section">
+    <h2>VI. SECURITY MEASURES</h2>
+    <p>
+      The Organization employs encryption, access controls, and monitoring systems
+      to protect collected information. While no system is impervious, reasonable
+      and appropriate measures are maintained to safeguard data integrity.
+    </p>
+  </div>
+
+  <div class="doc-section">
+    <h2>VII. YOUR RIGHTS</h2>
+    <p>
+      You may request access to, correction of, or deletion of any personal information
+      held by the Organization. To exercise these rights, initiate a transmission through
+      the designated secure channel with the subject line "DATA REQUEST."
+    </p>
+  </div>
+
+  <div class="doc-section">
+    <h2>VIII. MODIFICATIONS</h2>
+    <p>
+      This protocol may be updated without prior notice. Material changes will be
+      reflected in the revision date above. Continued access constitutes acceptance
+      of the current protocol.
+    </p>
+  </div>
+
+  <div class="doc-divider"></div>
+
+  <div class="doc-section">
+    <p style="color: var(--text-faint); font-size: 13px;">
+      For privacy-related inquiries, initiate a transmission through the
+      designated <a href="index.html#transmission">secure channel</a>.
+    </p>
+  </div>
+</div>
+
+<div class="doc-footer">
+  PH-NODE-5840 // ALL RIGHTS RESERVED // STAY QUIET
+</div>
+
+</body>
+</html>
